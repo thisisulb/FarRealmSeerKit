@@ -1,0 +1,260 @@
+BACKUP ~FarRealmSeer/backup~ // So WeiDU can uninstall
+AUTHOR ~Mod Forum: - ~ // Contact address displayed if installation fails
+README ~FarRealmSeer/readme.txt~ // Shows readme file
+
+ALWAYS
+  // Borrowed from Edwin Romance: convert strings to UTF-8 for BGEE/BG2EE
+  INCLUDE ~%MOD_FOLDER%/lib/handle_charsets.tpa~
+
+  // No exception, everything needs to be converted
+  ACTION_DEFINE_ARRAY UBnoconvert BEGIN END
+
+  // ubbear.tra needs to be reloaded?
+  ACTION_DEFINE_ARRAY UBreload BEGIN UBFRS END
+
+  // There is no "language" folder so the root of all languages is %MOD_FOLDER%
+  LAF HANDLE_CHARSETS
+    INT_VAR
+      infer_charset = 1
+    STR_VAR
+      tra_path = EVAL ~%MOD_FOLDER%/translations~
+	  noconvert_array = UBnoconvert
+      reload_array = UBreload
+  END
+    ACTION_IF (NOT GAME_IS ~soa tob iwd2 pst bg1 totsc iwd how totlm tutu tutu_totsc bgt ca iwd_in_bg2 bg2ee eet iwdee~) THEN BEGIN     // Check if BGEE/SOD
+COPY ~FarRealmSeer/files/25STWEAP.2DA~ ~override~                                                               // Add working 25STWEAP.2DA copy from BGII so ADD_KIT command doesn't break
+END
+END
+
+
+LANGUAGE ~English~  ~english~ ~FarRealmSeer/translations/english/UBFRS.tra~
+//LANGUAGE ~Deutsch~  ~german~  ~FarRealmSeer/translations/german/UBFRS.tra~
+
+BEGIN 
+~ Far Realm Seer Kit ~ 
+
+
+// EE compatibility patch, updated version by Subtledoctor
+INCLUDE ~FarRealmSeer/lib/fl#add_kit_ee.tpa~
+
+// Internal name of the kit
+ADD_KIT ~UBFRS~
+
+  // Appended to CLASWEAP.2da
+  ~UBFRS                1           0           1           1           0           0           0           1~
+
+  // Appended column-wise to WEAPPROF.2da
+  ~UBFRS 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 1 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+  // Appended to ABCLASRQ.2da
+  ~UBFRS                0       0       12       0       12      0~
+
+  // Appended to ABCLSMOD.2da
+  ~UBFRS                0       0       0      0       0       0~
+
+  // Appended to ABDCDSRQ.2da
+  ~UBFRS                0 0 0 0 0 0~
+
+  // Appended to ABDCSCRQ.2da
+  ~UBFRS                0 0 0 0 0 0~
+
+  // Appended to ALIGNMNT.2da
+  ~UBFRS                0       0       0       0       1       1       0       1       1~
+
+  // Appended to DUALCLAS.2da
+  ~UBFRS                0       0       0       0       0       0~
+
+  // Path to my CLAB.2da file 
+  ~FarRealmSeer/files/CLABUBFR.2da~
+
+  // PC races and classes allowed to use this kit, from KITTABLE.2da
+  ~K_SH_H K_SH_HO~
+
+  // Usability flags, added to the end of the KITLIST.2da entry
+  ~0x00004000        21~
+
+  // HLA table to use; see LUABBR.2da
+  ~Sh0~
+
+  // List of starting equipment for PCs starting in ToB. Appended column-wise to 25STWEAP.2da
+  ~LEAT14 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN4,2 POTN14,5 HAM07 SW1H27 STAF08~
+
+  // Lower, mixed, and help kit names and descriptions, added to KITLIST.2da 
+  SAY @8
+  SAY @1
+  SAY @2
+  
+  // Call EE compatibility patch
+  LAF fl#add_kit_ee
+  STR_VAR
+  kit_name = UBFRS
+  END
+
+COMPILE ~FarRealmSeer/files/BDSHUNSU.baf~
+//COMPILE ~FarRealmSeer/files/UBFRS.baf~
+  
+// Copy stuff over to override
+COPY ~FarRealmSeer/files/copy~ ~override~  //bulk copy
+
+COPY ~FarRealmSeer/files/UBFR03A.CRE~ ~override~
+SAY NAME1 @3 // unidentified name for items OR spell name
+SAY NAME2 @3 // unidentified name for items OR spell name
+//COPY ~FarRealmSeer/files/UBFR03B.CRE~ ~override~
+//SAY NAME1 ~Weak Manifestation~ // unidentified name for items OR spell name
+//SAY NAME2 ~Weak Manifestation~ // unidentified name for items OR spell name
+//COPY ~FarRealmSeer/files/UBFR03C.CRE~ ~override~
+//SAY NAME1 ~Weak Manifestation~ // unidentified name for items OR spell name
+//SAY NAME2 ~Weak Manifestation~ // unidentified name for items OR spell name
+
+COPY ~FarRealmSeer/files/UBFR04A.CRE~ ~override~
+SAY NAME1 @4 // unidentified name for items OR spell name
+SAY NAME2 @4 // unidentified name for items OR spell name
+//COPY ~FarRealmSeer/files/UBFR04B.CRE~ ~override~
+//SAY NAME1 ~Lesser Manifestation~ // unidentified name for items OR spell name
+//SAY NAME2 ~Lesser Manifestation~ // unidentified name for items OR spell name
+//COPY ~FarRealmSeer/files/UBFR04C.CRE~ ~override~
+//SAY NAME1 ~Lesser Manifestation~ // unidentified name for items OR spell name
+//SAY NAME2 ~Lesser Manifestation~ // unidentified name for items OR spell name
+
+COPY ~FarRealmSeer/files/UBFR05A.CRE~ ~override~
+SAY NAME1 @5 // unidentified name for items OR spell name
+SAY NAME2 @5 // unidentified name for items OR spell name
+//COPY ~FarRealmSeer/files/UBFR05B.CRE~ ~override~
+//SAY NAME1 ~Ancient Horror~ // unidentified name for items OR spell name
+//SAY NAME2 ~Ancient Horror~ // unidentified name for items OR spell name
+//COPY ~FarRealmSeer/files/UBFR05C.CRE~ ~override~
+//SAY NAME1 ~Ancient Horror~ // unidentified name for items OR spell name
+//SAY NAME2 ~Ancient Horror~ // unidentified name for items OR spell name
+
+COPY ~FarRealmSeer/files/UBFR06A.CRE~ ~override~
+SAY NAME1 @6 // unidentified name for items OR spell name
+SAY NAME2 @6 // unidentified name for items OR spell name
+//COPY ~FarRealmSeer/files/UBFR06B.CRE~ ~override~
+//SAY NAME1 ~Great Old One~ // unidentified name for items OR spell name
+//SAY NAME2 ~Great Old One~ // unidentified name for items OR spell name
+
+COPY ~FarRealmSeer/files/UBFR02.SPL~ ~override~ //The new shaman dance
+  LPF ALTER_EFFECT
+    INT_VAR
+      check_globals = 1
+      check_headers = 1
+      match_opcode = 139 // display string
+      match_parameter1 = 69614 // "A minor animal spirit answers your call."
+ parameter1 = RESOLVE_STR_REF (@7)
+  END
+  LPF ALTER_EFFECT
+    INT_VAR
+      check_globals = 1
+      check_headers = 1
+      match_opcode = 139 // display string
+      match_parameter1 = 69615 // "A major animal spirit answers your call."
+ parameter1 = RESOLVE_STR_REF (@9)
+  END
+    LPF ALTER_EFFECT
+    INT_VAR
+      check_globals = 1
+      check_headers = 1
+      match_opcode = 139 // display string
+      match_parameter1 = 69616 // "A minor nature spirit answers your call."
+ parameter1 = RESOLVE_STR_REF (@10)
+  END
+  LPF ALTER_EFFECT
+    INT_VAR
+      check_globals = 1
+      check_headers = 1
+      match_opcode = 139 // display string
+      match_parameter1 = 69617 // "A major nature spirit answers your call."
+ parameter1 = RESOLVE_STR_REF (@11)
+  END
+  LPF ALTER_EFFECT
+    INT_VAR
+      check_globals = 1
+      check_headers = 1
+      match_opcode = 139 // display string
+      match_parameter1 = 69613 // "No spirits answer your call."
+ parameter1 = RESOLVE_STR_REF (@12)
+  END
+
+  ////////////////// Items //////////////////
+  
+COPY ~FarRealmSeer/files/UBFRSCLK.ITM~ ~override~
+ SAY NAME2 @13 // identified name for items; not used for spells
+ SAY DESC @14 // identified description for items, unused for spells
+	LPF ALTER_EFFECT
+    INT_VAR
+      check_globals = 1
+      check_headers = 1
+      match_opcode = 139 // display string
+      match_parameter1 = 4742 // "Spell ineffective"
+      parameter1 = RESOLVE_STR_REF (@15)
+	END
+	
+	//Add missing buff effects to BG2 Games
+ACTION_IF (NOT FILE_EXISTS_IN_GAME ~BDAMUL26.SPL~) THEN BEGIN          
+COPY ~FarRealmSeer/files/BDAMUL26.SPL~ ~override~
+END
+ACTION_IF (NOT FILE_EXISTS_IN_GAME ~BDHELM16.SPL~) THEN BEGIN          
+COPY ~FarRealmSeer/files/BDHELM16.SPL~ ~override~
+END
+ACTION_IF (NOT FILE_EXISTS_IN_GAME ~BDSTAF02.SPL~) THEN BEGIN          
+COPY ~FarRealmSeer/files/BDSTAF02.SPL~ ~override~
+END
+
+COPY ~FarRealmSeer/files/UBFRSDG.ITM~ ~override~
+ SAY NAME2 @16 // identified name for items; not used for spells
+ SAY DESC @17 // 
+	LPF ALTER_EFFECT
+    INT_VAR
+      check_globals = 1
+      check_headers = 1
+      match_opcode = 319 // restrict item
+      //match_special = 0x2c // "Shaman"
+      special = RESOLVE_STR_REF (@18)
+	END
+
+COPY_EXISTING ~KEY26.ITM~ ~override~
+SAY DESC @19
+
+COPY ~FarRealmSeer/files/UBFRSSKL.ITM~ ~override~
+ SAY NAME2 @20 // identified name for items; not used for spells
+ SAY DESC @21
+	LPF ALTER_EFFECT
+    INT_VAR
+      check_globals = 1
+      check_headers = 1
+      match_opcode = 319 // restrict item
+      //match_special = 0x2c // "Shaman"
+      special = RESOLVE_STR_REF (@18)
+	END
+
+APPEND ~animate.ids~ ~0x3001 Neothelid_SoD~ UNLESS ~0x3001~  //write animate.ids
+//Add animation to games that don't include it
+ACTION_IF (NOT GAME_INCLUDES ~bg1~) THEN BEGIN             
+COPY ~FarRealmSeer/files/animations~ ~override~
+COPY ~FarRealmSeer/files/3001_BG2.INI~ ~override/3001.INI~
+END
+
+ACTION_IF (NOT GAME_INCLUDES ~bg2~) THEN BEGIN          
+COPY ~FarRealmSeer/files/3001_SoD.INI~ ~override/3001.INI~
+END
+
+
+//add items to creatures
+ACTION_IF (FILE_EXISTS_IN_GAME ~HGNYA01.CRE~) THEN BEGIN   
+COPY_EXISTING ~HGNYA01.CRE~ ~override~ //Nyalee
+ADD_CRE_ITEM ~UBFRSSKL~ #3 #0 #0 ~unstealable~ ~inv~ //Plague Skull
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~CEDRUID2.CRE~) THEN BEGIN 
+COPY_EXISTING ~CEDRUID2.CRE~ ~override~ //Dalok
+ADD_CRE_ITEM ~UBFRSCLK~ #5 #0 #0 ~unstealable~ ~inv~ //Dreamwalker's Garments
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~ISHADMT1.CRE~) THEN BEGIN 
+COPY_EXISTING ~ISHADMT1.CRE~ ~override~ //Assassin, Irenicu's Dungeon level 2
+ADD_CRE_ITEM ~UBFRSDG~ #0 #0 #0 ~unstealable~ ~inv~ //Yahz'ka +1
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~KAROUG.CRE~) THEN BEGIN 
+COPY_EXISTING ~KAROUG.CRE~ ~override~ //Karoug, Wolfwere leader, WW Island
+ADD_CRE_ITEM ~UBFRSDG~ #0 #0 #0 ~unstealable~ ~inv~ //Yahz'ka +1
+END

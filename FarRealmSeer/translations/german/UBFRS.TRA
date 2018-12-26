@@ -1,0 +1,118 @@
+@1 = ~Far Realm Seer~
+@2 = ~Far Realm Seer: The Far Realm is a plane of madness situated very far from the planes of the standard cosmology. This maddening realm has many alien and twisted inhabitants, some even as powerful as deities.
+Some shamans have a mythical connection that transcends the spirit world and allows them to extend their sight into the far corners of the cosmos. Of those that manage to retain their sanity a select few decide to embrace the maddening realm and harness its power for themselves.
+
+CLASS FEATURES:
+
+– May only wear leather, studded leather, and hide armor.
+– May not equip shields larger than bucklers.
+– May only use the following weapons: dagger, club, spear, axe, quarterstaff, dart, sling, and shortbow.
+– May only become Proficient (one slot) in any weapon class.
+– May only become Proficient (one slot) in any fighting style.
+– May cast druidic spells.
+– Does not automatically learn all spells of a given level as Druids do. Instead, Shamans select new spells to learn at each level, which they can cast daily without memorization.
+– Gains immediate access to a number of Shaman-specific spells, which can be cast like any other: Spirit Ward, Writhing Fog, Spiritual Clarity, Spirit Fire, Recall Spirit, Spiritual Lock, and Ether Gate.
+– Gains use of the Detect Illusion skill with 20% points as a base and an 4 points per level, up to a maximum of 100% at level 20.
+– Gains the 'Far Realm Exposure' trait.
+– May use 'Shamanic Dance' at will.
+
+FAR REALM EXPOSURE: There is little that would instill more fear than the maddening terrors of the Far Realm. Constant exposure to those condition has left the Far Realm Seer immune to fear and moral failure. Yet, their sight of the Far Realm is still a constant strain on the mind, leaving them with a -2 penalty to saves vs. enchantment spells.
+  
+SHAMANIC DANCE: Far Realm Seers can pierce the veil between the Prime Material Plane and the Far Realm and thereby summon entities from the Far Realm to assist them in combat. While dancing, the Far Realm Seer takes a -4 penalty to Armor Class and cannot move, attack, cast spells, use items and special abilities, or perform any other activity. Each round while the Far Realm Seer dances, there is a 35% base chance plus 2% for each level of the Shaman that an entity will answer the call, up to a maximum of 75% at level 20. Any summoned beings will disappear if the Shaman moves, stops dancing, or if the beings leave visual range. The entities grow in power as the Far Realm Seer gains additional levels:
+– Level 1: Weak manifestations, up to 2 manifestations at the same time.
+– Level 6: Lesser manifestations, up to 3 manifestations at the same time.
+– Level 12: Average manifestations, up to 4 entities at the same time.
+– Level 18: Strong manifestations, up to 5 entities at the same time.
+The type of manifestation is randomly determined from all the manifestations available at the Far Realm Seer's level.
+
+– Does not gain bonus spells per day from high Wisdom.
+– Can not be of good or lawful alignment.
+– May not dual-class or multi-class.
+– Ineligible for any stronghold. (This affects only the Shadows of Amn campaign in Baldur's Gate II: Enhanced Edition.)
+– Hit Dice: d8~
+@3 = ~Weak Manifestation~
+@4 = ~Lesser Manifestation~
+@5 = ~Medium Manifestation~
+@6 = ~Strong Manifestation~
+@7 = ~You weaken the veil between the realms slightly and a weak manifestation appears.~
+@8 = ~far realm seer~
+@9 = ~You weaken the veil between the realms somewhat and a lesser manifestation appears.~
+@10 = ~You weaken the veil between the realms and a manifestation appears.~
+@11 = ~You weaken the veil between the realms greatly and a strong manifestation appears.~
+@12 = ~Your call to the Far Realm remains unanswered.~
+@13 = ~Dreamwalker's Garments~
+@14 = ~This cloak is made from a rough blue fabric and is covered with a number of symbols ranging from moons and stars to more obscure pictograms. Wearing it bestows the owner with a deeper connection to the spirit realm.
+
+
+STATISTICS:
+
+Equipped abilities: 
+– Armor Class: +1
+– Summoned spirits remain for two additional rounds after the shaman stops dancing
+
+Charge abilities:
+– Spirit Rest:
+Range: 30 ft.
+Area of Effect: Party
+Duration: 1 round
+While their bodies fall asleep in the real world the minds of everyone affected enter the Spirit  realm. After one round everyone affected will awake as if they had rested comfortably for a whole night.
+
+Weight: 3~
+@15 = ~Spirit Rest~
+@16 = ~Yahz'ka +1~
+@17 = ~Dagger of the Blood Rites: Yahz'ka +1
+Even divination spells yield little more information about this weapon than its name.
+The general design and the runes covering its unusually long, blood encrusted blade suggest that the weapon originates from Anchorome and was most likely used in religious events and not as a fighting weapon.
+
+Holding the weapon causes an uneasy prickling on the wielder's skin and <PRO_HISHER> thoughts to occasionally drift towards violence.
+
+
+STATISTICS:
+
+Combat abilities: 
+– 1/2 extra attack per round
+– 10% chance per hit that the wielder goes berserk for the next 3 rounds
+
+Equipped abilities: 
+– Summoned spirits are hasted
+
+THAC0: +1
+Damage: 1d4+1
+Damage Type: Piercing
+Speed Factor: 0
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+@18 = ~Shaman~
+@19 = ~Only this gigantic shark tooth, said to have been left by the sahuagin god Sekolah, can open the way to the rebel prince's base.
+
+A closer inspection reveals that the tooth has some magical qualities. The power it holds is primal and chaotic in nature and would not be of use to most magic users but a shaman might be able to harness some of it.
+
+STATISTICS:
+
+Special Abilities: 
+- While in a shaman's inventory <PRO_HISHER> summoned spirits gain +1 to hit and damage rolls.
+
+Weight: 0~
+@20 = ~Plague Skull~
+@21 = ~Plague Skull
+
+This vile looking humanoid skull emits an aura of pure evil and decay. While it is enchanted with powerful magic only a truly evil person would ever consider using it.
+
+STATISTICS:
+
+Equipped abilities: 
+– Immunity to disease
+– Magic Resistance: +10%
+
+Charge abilities:
+– Cast Dolorous Decay three times per day:
+Dolorous Decay is a rotting and withering of the body that spreads throughout the afflicted creature quickly. The disease will instantly cause a permanent -1 penalty to strength, dexterity, and constitution. If the target fails a saving throw vs. poison at -4, the decay will inflict 1 point of damage per second, until a total of 60 hit points of damage are inflicted, and another point of damage to each physical attribute every 5 rounds. The afflicted creature will also be slowed for the duration of the decay, and ability scores lost with this spell can only be restored with a Cure Disease, a Heal, or a Greater Restoration spell.
+
+Special Abilities: 
+- Summoned spirits have a 30% chance on hit to afflict their target with a disease similar to Dolorous Decay.
+
+Weight: 3~
